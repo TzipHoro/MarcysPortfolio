@@ -142,15 +142,15 @@ export default function Home() {
               Contact Me
             </a>
             <a
-              href="https://github.com"
+              href="/resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="px-8 py-3 rounded-full border-2 border-[#5A77D8] text-[#5A77D8] font-medium hover:bg-[#C3DBFD]/30 transition-colors"
             >
-              Portfolio
+              Resume
             </a>
             <a
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/in/marcella-lehman-14564a174/"
               target="_blank"
               rel="noopener noreferrer"
               className="px-8 py-3 rounded-full border-2 border-[#FF5DB6] text-[#FF5DB6] font-medium hover:bg-[#FFC0DB]/20 transition-colors"
