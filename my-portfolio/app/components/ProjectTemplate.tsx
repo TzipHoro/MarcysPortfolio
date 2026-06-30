@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import Nav from "./Nav";
 
 export interface ProjectData {
@@ -10,16 +11,38 @@ export interface ProjectData {
   team: string;
   role: string;
   prototypeUrl?: string;
+  heroImage?: string;
+  problemStatements?: string[];
+  intro?: string;
+  researchNote?: string;
+  methods?: string;
+  tools?: string;
+  whyReasons?: { label: string; description: string }[];
   about: string;
   goals: string[];
   discover: {
+    problemStatement?: string;
     research: string;
+    competitiveAnalysisImage?: string;
+    competitiveInsights?: string[];
+    competitors?: { name: string; strengths: string[]; weaknesses: string[] }[];
     interviews: string;
+    userQuote?: string;
+    userQuoteAuthor?: string;
+    screeningQuestions?: string[];
+    interviewStats?: string[];
+    surveyStats?: string[];
+    participants?: { name: string; age: number; gender: string; job: string; location: string; status: string }[];
     discoveryFindings: string[];
   };
   define: {
     affinityMap: string;
     persona: string;
+    personaImage?: string;
+    personaImage2?: string;
+    firstImpressions?: string[];
+    scenarios?: { title: string; description: string; tasks: string[]; results?: string[][]; taskTimes?: string[] }[];
+    findings?: string[];
   };
   ideate: {
     journeyMap: string;
@@ -31,8 +54,13 @@ export interface ProjectData {
     sketches: string;
     wireframes: string;
   };
+  steps?: ("Discover" | "Define" | "Ideate" | "Design" | "Deliver")[];
   deliver: {
+    uiKit?: string;
+    hifi?: string;
     testing: string;
+    recommendations?: string[];
+    takeaways?: string[];
   };
   reflection: string;
 }
@@ -89,11 +117,12 @@ function StepTabs({ active, setActive }: { active: string; setActive: (s: string
 
 import { useState, useRef } from "react";
 
-const STEPS = ["Discover", "Define", "Ideate", "Design", "Deliver"] as const;
-type Step = (typeof STEPS)[number];
+const ALL_STEPS = ["Discover", "Define", "Ideate", "Design", "Deliver"] as const;
+type Step = (typeof ALL_STEPS)[number];
 
 function DesignProcessPlaceholder({ data }: { data: ProjectData }) {
-  const [active, setActive] = useState<Step>("Discover");
+  const STEPS = (data.steps ?? ALL_STEPS) as Step[];
+  const [active, setActive] = useState<Step>(STEPS[0]);
   const panelRef = useRef<HTMLDivElement>(null);
 
   function goTo(step: Step) {
@@ -133,32 +162,202 @@ function DesignProcessPlaceholder({ data }: { data: ProjectData }) {
 
         {active === "Discover" && (
           <div>
-            <SubHeading>Research</SubHeading>
-            <Body className="mb-6">{data.discover.research || PLACEHOLDER}</Body>
+            {data.discover.problemStatement && (
+              <>
+                <SubHeading>Problem Statement</SubHeading>
+                <blockquote className="border-l-4 border-[#FF5DB6] pl-4 py-2 mb-8 text-zinc-700 italic">
+                  {data.discover.problemStatement}
+                </blockquote>
+              </>
+            )}
 
-            <SubHeading>Interviews</SubHeading>
+            <SubHeading>Research</SubHeading>
+            <Body className="mb-4">{data.discover.research || PLACEHOLDER}</Body>
+
+            {(data.discover.competitiveAnalysisImage || (data.discover.competitiveInsights && data.discover.competitiveInsights.length > 0)) && (
+              <>
+                {data.discover.competitiveAnalysisImage ? (
+                  <Image src={data.discover.competitiveAnalysisImage} alt="Competitive analysis" width={900} height={600} className="rounded-xl shadow-md w-full object-contain mb-6" />
+                ) : (
+                  <PlaceholderImage label="Competitive analysis" />
+                )}
+                {data.discover.competitiveInsights && data.discover.competitiveInsights.length > 0 && (
+                  <ul className="list-disc pl-6 text-zinc-700 space-y-2 mb-8">
+                    {data.discover.competitiveInsights.map((c, i) => <li key={i}>{c}</li>)}
+                  </ul>
+                )}
+              </>
+            )}
+
+            {data.discover.competitors && data.discover.competitors.length > 0 && (
+              <>
+                <SubHeading>Competitor Breakdown</SubHeading>
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
+                  {data.discover.competitors.map((c, i) => (
+                    <div key={i} className="rounded-2xl bg-[#EEF4FF] border border-[#C3DBFD] p-5">
+                      <p className="text-[#003F88] font-semibold text-base mb-3">{c.name}</p>
+                      <p className="text-xs font-semibold text-green-700 uppercase mb-1">Strengths</p>
+                      <ul className="list-disc pl-4 text-zinc-600 text-sm space-y-1 mb-3">
+                        {c.strengths.map((s, si) => <li key={si}>{s}</li>)}
+                      </ul>
+                      <p className="text-xs font-semibold text-red-600 uppercase mb-1">Weaknesses</p>
+                      <ul className="list-disc pl-4 text-zinc-600 text-sm space-y-1">
+                        {c.weaknesses.map((w, wi) => <li key={wi}>{w}</li>)}
+                      </ul>
+                    </div>
+                  ))}
+                </div>
+              </>
+            )}
+
+            <SubHeading>Survey & User Interviews</SubHeading>
             <Body className="mb-4">{data.discover.interviews || PLACEHOLDER}</Body>
 
-            <SubHeading>Discovery from Interviews</SubHeading>
-            {data.discover.discoveryFindings.length > 0 ? (
-              <ul className="list-disc pl-6 text-zinc-700 space-y-2">
-                {data.discover.discoveryFindings.map((f, i) => <li key={i}>{f}</li>)}
-              </ul>
-            ) : (
-              <Body>{PLACEHOLDER}</Body>
+            {data.discover.screeningQuestions && data.discover.screeningQuestions.length > 0 && (
+              <>
+                <SubHeading>Screening Questions</SubHeading>
+                <ul className="list-disc pl-6 text-zinc-700 space-y-2 mb-8">
+                  {data.discover.screeningQuestions.map((q, i) => <li key={i}>{q}</li>)}
+                </ul>
+              </>
+            )}
+
+            {data.discover.participants && data.discover.participants.length > 0 && (
+              <>
+                <SubHeading>User Demographics</SubHeading>
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
+                  {data.discover.participants.map((p, i) => (
+                    <div key={i} className="rounded-2xl bg-[#EEF4FF] border border-[#C3DBFD] p-5">
+                      <p className="text-[#003F88] font-semibold text-base mb-3">{p.name}</p>
+                      <p className="text-zinc-600 text-sm mb-1"><span className="font-medium">Age:</span> {p.age}</p>
+                      <p className="text-zinc-600 text-sm mb-1"><span className="font-medium">Gender:</span> {p.gender}</p>
+                      <p className="text-zinc-600 text-sm mb-1"><span className="font-medium">Job:</span> {p.job}</p>
+                      <p className="text-zinc-600 text-sm mb-1"><span className="font-medium">Location:</span> {p.location}</p>
+                      <p className="text-zinc-600 text-sm"><span className="font-medium">Status:</span> {p.status}</p>
+                    </div>
+                  ))}
+                </div>
+              </>
+            )}
+
+            {data.discover.userQuote && (
+              <blockquote className="border-l-4 border-[#FF5DB6] pl-4 py-2 mb-8 text-zinc-700 italic">
+                "{data.discover.userQuote}"
+                {data.discover.userQuoteAuthor && <footer className="mt-1 text-sm font-semibold not-italic text-[#003F88]">— {data.discover.userQuoteAuthor}</footer>}
+              </blockquote>
+            )}
+
+            {data.discover.interviewStats && data.discover.interviewStats.length > 0 && (
+              <>
+                <SubHeading>One-on-One User Interview Insights</SubHeading>
+                <ul className="list-disc pl-6 text-zinc-700 space-y-2 mb-8">
+                  {data.discover.interviewStats.map((s, i) => <li key={i}>{s}</li>)}
+                </ul>
+              </>
+            )}
+
+            {data.discover.surveyStats && data.discover.surveyStats.length > 0 && (
+              <>
+                <SubHeading>Survey Insights</SubHeading>
+                <ul className="list-disc pl-6 text-zinc-700 space-y-2 mb-8">
+                  {data.discover.surveyStats.map((s, i) => <li key={i}>{s}</li>)}
+                </ul>
+              </>
+            )}
+
+            {data.discover.discoveryFindings.length > 0 && (
+              <>
+                <SubHeading>Discovery from Interviews</SubHeading>
+                <ul className="list-disc pl-6 text-zinc-700 space-y-2">
+                  {data.discover.discoveryFindings.map((f, i) => <li key={i}>{f}</li>)}
+                </ul>
+              </>
             )}
           </div>
         )}
 
         {active === "Define" && (
           <div>
-            <SubHeading>Affinity Map</SubHeading>
-            <Body className="mb-6">{data.define.affinityMap || PLACEHOLDER}</Body>
-            <PlaceholderImage label="Affinity map" />
+            {data.define.firstImpressions ? (
+              <>
+                <SubHeading>First Impressions</SubHeading>
+                <ul className="list-disc pl-6 text-zinc-700 space-y-2 mb-8">
+                  {data.define.firstImpressions.map((f, i) => <li key={i}>{f}</li>)}
+                </ul>
 
-            <SubHeading>Persona</SubHeading>
-            <Body className="mb-4">{data.define.persona || PLACEHOLDER}</Body>
-            <PlaceholderImage label="Persona" />
+                {data.define.scenarios && data.define.scenarios.map((scenario, si) => (
+                  <div key={si} className="mb-10">
+                    <SubHeading>{scenario.title}</SubHeading>
+                    <Body className="mb-4">{scenario.description}</Body>
+                    <ul className="list-disc pl-6 text-zinc-700 space-y-1 mb-6">
+                      {scenario.tasks.map((t, ti) => <li key={ti}>{t}</li>)}
+                    </ul>
+
+                    {scenario.results && (
+                      <div className="mb-4 overflow-x-auto">
+                        <table className="w-full text-sm text-center border-collapse">
+                          <thead>
+                            <tr className="bg-[#EEF4FF]">
+                              <th className="border border-[#C3DBFD] px-4 py-2 text-left text-[#003F88]"></th>
+                              {scenario.tasks.map((_, ti) => (
+                                <th key={ti} className="border border-[#C3DBFD] px-4 py-2 text-[#003F88]">Task {ti + 1}</th>
+                              ))}
+                            </tr>
+                          </thead>
+                          <tbody>
+                            {scenario.results.map((row, ri) => (
+                              <tr key={ri} className="even:bg-[#F8FAFF]">
+                                <td className="border border-[#C3DBFD] px-4 py-2 text-left font-medium text-zinc-700">User {ri + 1}</td>
+                                {row.map((cell, ci) => (
+                                  <td key={ci} className={`border border-[#C3DBFD] px-4 py-2 font-semibold ${cell === "✓" ? "text-green-600" : "text-amber-500"}`}>{cell}</td>
+                                ))}
+                              </tr>
+                            ))}
+                          </tbody>
+                        </table>
+                      </div>
+                    )}
+
+                    {scenario.taskTimes && (
+                      <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 mb-4">
+                        {scenario.taskTimes.map((time, ti) => (
+                          <div key={ti} className="rounded-2xl bg-[#EEF4FF] border border-[#C3DBFD] p-4 text-center">
+                            <p className="text-[#003F88] font-semibold text-sm mb-1">Task {ti + 1}</p>
+                            <p className="text-zinc-600 text-sm">{time}</p>
+                          </div>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                ))}
+
+                {data.define.findings && data.define.findings.length > 0 && (
+                  <>
+                    <SubHeading>What I Learned</SubHeading>
+                    <ul className="list-disc pl-6 text-zinc-700 space-y-2">
+                      {data.define.findings.map((f, i) => <li key={i}>{f}</li>)}
+                    </ul>
+                  </>
+                )}
+              </>
+            ) : (
+              <>
+                <SubHeading>Affinity Map</SubHeading>
+                <Body className="mb-6">{data.define.affinityMap || PLACEHOLDER}</Body>
+                <PlaceholderImage label="Affinity map" />
+
+                <SubHeading>Persona</SubHeading>
+                {data.define.persona && <Body className="mb-4">{data.define.persona}</Body>}
+                {data.define.personaImage ? (
+                  <Image src={data.define.personaImage} alt="User persona" width={900} height={600} className="rounded-xl shadow-md w-full object-contain mb-4" />
+                ) : (
+                  <PlaceholderImage label="Persona" />
+                )}
+                {data.define.personaImage2 && (
+                  <Image src={data.define.personaImage2} alt="User persona 2" width={900} height={600} className="rounded-xl shadow-md w-full object-contain" />
+                )}
+              </>
+            )}
           </div>
         )}
 
@@ -198,9 +397,44 @@ function DesignProcessPlaceholder({ data }: { data: ProjectData }) {
 
         {active === "Deliver" && (
           <div>
-            <SubHeading>Testing</SubHeading>
-            <Body className="mb-4">{data.deliver.testing || PLACEHOLDER}</Body>
-            <PlaceholderImage label="Testing / delivery" />
+            {data.deliver.uiKit && (
+              <>
+                <SubHeading>UI Kit</SubHeading>
+                <Body className="mb-4">{data.deliver.uiKit}</Body>
+                <PlaceholderImage label="UI kit" />
+              </>
+            )}
+
+            {data.deliver.hifi && (
+              <>
+                <SubHeading>Hi-Fi Prototype</SubHeading>
+                <Body className="mb-4">{data.deliver.hifi}</Body>
+                <PlaceholderImage label="Hi-fi screens" />
+              </>
+            )}
+
+            {data.deliver.recommendations ? (
+              <>
+                <SubHeading>Recommendations</SubHeading>
+                <ul className="list-disc pl-6 text-zinc-700 space-y-2 mb-8">
+                  {data.deliver.recommendations.map((r, i) => <li key={i}>{r}</li>)}
+                </ul>
+                {data.deliver.takeaways && (
+                  <>
+                    <SubHeading>Takeaways</SubHeading>
+                    <ul className="list-disc pl-6 text-zinc-700 space-y-2">
+                      {data.deliver.takeaways.map((t, i) => <li key={i}>{t}</li>)}
+                    </ul>
+                  </>
+                )}
+              </>
+            ) : (
+              <>
+                <SubHeading>Testing</SubHeading>
+                <Body className="mb-4">{data.deliver.testing || PLACEHOLDER}</Body>
+                <PlaceholderImage label="Testing / delivery" />
+              </>
+            )}
           </div>
         )}
 
@@ -239,8 +473,18 @@ export default function ProjectTemplate({ data }: { data: ProjectData }) {
 
         {/* Hero card */}
         <div className="flex max-md:flex-col flex-row items-center gap-10 mb-12 bg-[#C3DBFD]/20 border border-[#C3DBFD] rounded-2xl p-8">
-          <div className="shrink-0 w-[200px] max-md:w-full">
-            <PlaceholderImage label="Phone / hero mockup" />
+          <div className="shrink-0">
+            {data.heroImage ? (
+              <Image
+                src={data.heroImage}
+                alt={`${data.title} mockup`}
+                width={200}
+                height={400}
+                className="rounded-xl shadow-lg object-contain"
+              />
+            ) : (
+              <div className="w-[200px]"><PlaceholderImage label="Phone / hero mockup" /></div>
+            )}
           </div>
           <div className="flex flex-col gap-4 max-md:items-center items-start max-md:text-center text-left">
             <p className="text-lg text-zinc-700 leading-relaxed">{data.subtitle}</p>
@@ -266,12 +510,41 @@ export default function ProjectTemplate({ data }: { data: ProjectData }) {
           <p className="text-zinc-700 mb-1"><strong>{data.subtitle}</strong></p>
           <p className="text-zinc-700 mb-1"><strong>My Team:</strong> {data.team}</p>
           <p className="text-zinc-700 mb-4"><strong>My Role:</strong> {data.role}</p>
+          {data.methods && <p className="text-zinc-700 mb-1"><strong>Methods:</strong> {data.methods}</p>}
+          {data.tools && <p className="text-zinc-700 mb-4"><strong>Tools:</strong> {data.tools}</p>}
+          {data.intro && <Body>{data.intro}</Body>}
+          {data.researchNote && (
+            <p className="mt-3 text-sm text-zinc-500 italic">{data.researchNote}</p>
+          )}
         </Section>
 
         {/* About */}
         <Section title={`About ${data.title.split("—")[0].trim()}`}>
           <Body>{data.about || PLACEHOLDER}</Body>
         </Section>
+
+        {/* Problem Statements */}
+        {data.problemStatements && data.problemStatements.length > 0 && (
+          <Section title="Problem Statements">
+            <ul className="list-disc pl-6 text-zinc-700 space-y-2">
+              {data.problemStatements.map((p, i) => <li key={i}>{p}</li>)}
+            </ul>
+          </Section>
+        )}
+
+        {/* Why this project */}
+        {data.whyReasons && data.whyReasons.length > 0 && (
+          <Section title="Why Loop?">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+              {data.whyReasons.map((r, i) => (
+                <div key={i} className="rounded-2xl bg-[#EEF4FF] border border-[#C3DBFD] p-5 text-center">
+                  <p className="text-[#003F88] font-semibold text-base mb-1">{r.label}</p>
+                  <p className="text-zinc-600 text-sm">{r.description}</p>
+                </div>
+              ))}
+            </div>
+          </Section>
+        )}
 
         {/* Goals */}
         <Section title="Goals">

@@ -85,28 +85,28 @@ export default function Home() {
                 title: "NPR News — UX Case Study (8 weeks)",
                 description:
                   "Student UX research and design project (team: Marcella, Emily, Kate, Shelly). I led research and design to prototype an MVP that connects users through interest-based communities, improving relevance and trust in news consumption.",
-                tags: ["UX Research", "UX Design", "Prototyping", "JTBD"],
+                tags: ["UX Research", "UX Design", "Prototyping", "JTBD", "School Project"],
               },
               {
                 slug: "nasaa",
                 title: "Nasaa — Travel Planning App (in progress)",
                 description:
                   "A travel app aimed at simplifying trip planning by addressing common traveler pain points (itineraries, collaboration, recommendations). Project currently in progress — focused on research and ideation.",
-                tags: ["UX Research", "Product Design", "Travel", "In Progress"],
+                tags: ["UX Research", "Product Design", "Travel", "In Progress", "School Project"],
               },
               {
                 slug: "loop-me-in",
                 title: "Loop Me In — UX Case Study (4 weeks)",
                 description:
                   "Solo UX research project evaluating ease of match-finding and usability on a friend-based dating app. Research focused on interviews, task flows, and usability testing to surface friction and improve trust and safety in matchmaking.",
-                tags: ["UX Research", "Usability Testing", "Product Research", "Dating App"],
+                tags: ["UX Research", "Usability Testing", "Product Research", "Dating App", "School Project"],
               },
               {
                 slug: "hr-nexus",
                 title: "HR Nexus — HR Advisory Platform (in progress)",
                 description:
                   "A technology platform that provides expert HR advice to employers dealing with workforce issues. The project is ongoing and focuses on research and product design to deliver practical employer-facing solutions.",
-                tags: ["Product Design", "HR Tech", "UX Research", "In Progress"],
+                tags: ["Product Design", "HR Tech", "UX Research", "In Progress", "School Project"],
               },
             ].map((project) => (
               <Link key={project.slug} href={`/projects/${project.slug}`} className="block">
