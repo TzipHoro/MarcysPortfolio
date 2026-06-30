@@ -110,9 +110,9 @@ export default function Home() {
               },
             ].map((project) => (
               <Link key={project.slug} href={`/projects/${project.slug}`} className="block">
-                <div className="border border-[#C3DBFD] rounded-lg p-6 hover:shadow-lg hover:border-[#5A77D8] transition-all">
-                  <h3 className="text-2xl font-semibold text-[#003F88] mb-2">{project.title}</h3>
-                  <p className="text-zinc-700 mb-4">{project.description}</p>
+                <div className="border border-[#C3DBFD] rounded-lg p-8 hover:shadow-lg hover:border-[#5A77D8] transition-all">
+                  <h3 className="text-2xl font-semibold text-[#003F88] mb-4">{project.title}</h3>
+                  <p className="text-zinc-700 leading-relaxed mb-6">{project.description}</p>
                   <div className="flex gap-2 flex-wrap">
                     {project.tags.map((tag) => (
                       <span key={tag} className="inline-block px-3 py-1 bg-[#FFC0DB]/40 text-[#003F88] rounded-full text-sm font-medium">{tag}</span>
