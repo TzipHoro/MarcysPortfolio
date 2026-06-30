@@ -14,7 +14,7 @@ export default function Nav() {
   return (
     <nav className="sticky top-0 z-40 border-b border-[#C3DBFD] bg-white/90 backdrop-blur-sm">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
-        <h2 className="text-2xl font-bold text-[#003F88]">Marcella Lehman</h2>
+        <a href="#" className="text-2xl font-bold text-[#003F88] hover:text-[#5A77D8] transition-colors">Marcella Lehman</a>
 
         {/* Desktop links */}
         <div className="max-sm:hidden flex gap-6">
