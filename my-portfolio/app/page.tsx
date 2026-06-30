@@ -128,11 +128,11 @@ export default function Home() {
       {/* Contact Section */}
       <section id="contact" className="bg-[#C3DBFD]/20 px-4 sm:px-6 lg:px-8 py-20">
         <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-4xl font-bold text-[#003F88] mb-8">Let's Work Together</h2>
+          <h2 className="text-4xl font-bold text-[#003F88] mb-8">Let's Connect</h2>
           <p className="text-lg text-zinc-700 mb-8">
-            I'm always interested in hearing about new projects and design challenges.
-            Whether you need a designer for a full-time role, freelance project, or consultation,
-            feel free to reach out. Let's create something remarkable.
+            I'm actively looking to break into the product design world and would love to hear
+            about any opportunities — whether that's a full-time role, internship, or just a conversation.
+            If you're working on something exciting or know someone who is, I'd love to connect.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
