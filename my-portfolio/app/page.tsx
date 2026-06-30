@@ -136,7 +136,7 @@ export default function Home() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="mailto:your-email@example.com"
+              href="mailto:marcella.lehman81@gmail.com"
               className="px-8 py-3 rounded-full bg-[#5A77D8] text-white font-medium hover:bg-[#003F88] transition-colors"
             >
               Contact Me
