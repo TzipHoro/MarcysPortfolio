@@ -307,7 +307,7 @@ function NprPage() {
           </div>
           <div className="flex flex-col gap-4 max-md:items-center items-start max-md:text-center text-left">
             <p className="text-lg text-zinc-700 leading-relaxed">
-              See the interactive prototype for this NPR News community feature — built in Figma after 8 weeks of research, testing, and iteration.
+              See the interactive prototype for this NPR News community feature built in Figma after 8 weeks of research, testing, and iteration.
             </p>
             <a
               href="https://figma.com/proto/KNA9xH2bFs2w2XhHi7D3jb/Untitled?mode=design&node-id=6-7764&page-id=0%3A1&scaling=min-zoom&show-proto-sidebar=1&starting-point-node-id=6%3A7764&t=BYg5oXA3TMiaZmr5-1&type=design"
