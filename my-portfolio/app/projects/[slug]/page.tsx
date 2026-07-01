@@ -8,7 +8,7 @@ import ProjectTemplate, { type ProjectData } from "../../components/ProjectTempl
 
 const OTHER_PROJECTS: Record<string, ProjectData> = {
   nasaa: {
-    title: "Nasaa — Travel Planning App",
+    title: "Nasaa Travel Planning App",
     subtitle: "UX Case Study | 2 Weeks",
     duration: "2 weeks",
     team: "Myself",
@@ -30,8 +30,8 @@ const OTHER_PROJECTS: Record<string, ProjectData> = {
       "How might we organize all of our travel information?",
     ],
     goals: [
-      "Understand the pain points of travelers and their needs when planning trips — identify the challenges and frustrations users face when booking travel, navigating destinations, and managing itineraries.",
-      "Assess the usability and user experience of the travel app — evaluate how easy it is for users to search for flights, accommodations, and activities, as well as how intuitive the app is in guiding them through the travel planning process.",
+      "Understand the pain points of travelers and their needs when planning trips, including the challenges and frustrations users face when booking travel, navigating destinations, and managing itineraries.",
+      "Assess the usability and user experience of the travel app, evaluating how easy it is for users to search for flights, accommodations, and activities, as well as how intuitive the app is in guiding them through the travel planning process.",
     ],
     discover: {
       problemStatement: "How might we help users efficiently plan their trips while saving time and reducing the stress of research, making our app the go-to tool for seamless travel planning?",
@@ -50,7 +50,7 @@ const OTHER_PROJECTS: Record<string, ProjectData> = {
         {
           name: "Rome2rio",
           strengths: ["Multiple languages", "No sign in required", "Free to use"],
-          weaknesses: ["Not an all-inclusive app — requires another app to finish processing your trip", "Does not allow a multiple destination option"],
+          weaknesses: ["Not an all-inclusive app, requires another app to finish processing your trip", "Does not allow a multiple destination option"],
         },
       ],
       interviews: "I conducted 3 in-depth user interviews ranging in age and gender, and distributed a survey that received 16 responses. My goal was to uncover specific pain points, preferences, and overall approaches to travel planning among both frequent and occasional travelers.",
@@ -90,18 +90,18 @@ const OTHER_PROJECTS: Record<string, ProjectData> = {
     },
     design: {
       sketches: "The challenge is to design an app that includes a feature for travelers to collaborate with a travel agent, ensuring it's easy to use and intuitive. I've created a basic sitemap to outline the structure, with new screens (highlighted in red) for this feature.\n\nI also made a few quick sketches to capture some initial ideas and notes. These sketches were more about getting the concept down quickly rather than focusing on details. They help visualize my thoughts and serve as a foundation for refining the design later.",
-      wireframes: "[ Placeholder ]",
+      wireframes: "[ Placeholder — ]",
     },
     deliver: {
-      uiKit: "For the creation of my new app, I developed a UI kit, carefully selecting the typography and colors based on insights and research related to travel. I also ensured that the design aligns with the brand image I want to project — an app that feels classy and refined.",
-      hifi: "After finalizing the initial design elements, I focused on completing the screens necessary for my app's core feature — connecting users with a travel agent. I made sure the key screens were intuitive and aligned with the brand's aesthetic. Once the design was in place, I created an interactive prototype of a user task to test its usability and identify areas that could be improved.\n\nTask: Login and choose an agent to your liking.",
+      uiKit: "For the creation of my new app, I developed a UI kit, carefully selecting the typography and colors based on insights and research related to travel. I also ensured that the design aligns with the brand image I want to project, an app that feels classy and refined.",
+      hifi: "After finalizing the initial design elements, I focused on completing the screens necessary for my app's core feature, connecting users with a travel agent. I made sure the key screens were intuitive and aligned with the brand's aesthetic. Once the design was in place, I created an interactive prototype of a user task to test its usability and identify areas that could be improved.\n\nTask: Login and choose an agent to your liking.",
       testing: "I conducted user testing with a small group of users, and the majority were able to complete the task without any issues. They found the process of connecting with a travel agent intuitive and straightforward. However, one user suggested adding a button on the homepage to more prominently showcase the option to connect with an agent. Based on this feedback, I made the adjustment and added a clear button on the homepage. This change highlighted the importance of user testing and how valuable real-time feedback is in refining the design to meet user expectations.",
     },
     reflection: "Going through my notes from the interviews and the surveys I conducted, I found several common problems encountered by would-be travelers. I am convinced that this is a worthwhile concept and this app will make it become a reality with a fair amount of further research and time.",
   },
 
   "loop-me-in": {
-    title: "Loop Me In — UX Case Study",
+    title: "Loop Me In UX Case Study",
     subtitle: "UX Case Study | 4 Weeks",
     duration: "4 weeks",
     team: "Myself",
@@ -161,7 +161,7 @@ const OTHER_PROJECTS: Record<string, ProjectData> = {
       affinityMap: "",
       persona: "",
       firstImpressions: [
-        "Overall, all three users agreed the UI could be worked on more — they felt it was too basic.",
+        "Overall, all three users agreed the UI could be worked on more, as they felt it was too basic.",
         "Users understood it was a dating social app but not from the homepage alone.",
         "All felt the homepage was unclear on its purpose.",
         "They all liked the onboarding instructions shown at the beginning.",
@@ -170,7 +170,7 @@ const OTHER_PROJECTS: Record<string, ProjectData> = {
       ],
       scenarios: [
         {
-          title: "Scenario 1 — Finding a Match",
+          title: "Scenario 1: Finding a Match",
           description: "You are someone currently single and looking to get into the dating world again. You already downloaded Loop and are ready to look through profiles.",
           tasks: [
             "Task 1: Look at some profiles and describe what you see.",
@@ -185,7 +185,7 @@ const OTHER_PROJECTS: Record<string, ProjectData> = {
           taskTimes: ["46 seconds", "206 seconds", "67 seconds"],
         },
         {
-          title: "Scenario 2 — Growing Your Network",
+          title: "Scenario 2: Growing Your Network",
           description: "You have a few friends on your network and would like to have some more. You specifically want to grow your network to discover new matches for yourself and friends.",
           tasks: [
             "Task 1: Add four new friends to your network.",
@@ -232,56 +232,56 @@ const OTHER_PROJECTS: Record<string, ProjectData> = {
       recommendations: [
         "The homepage needs to be cleaned up and reorganized around the app's main priority.",
         "The network tab should become the homepage since that is where users naturally navigated first.",
-        "Onboarding instructions do not need to be added — the app's purpose is clear once users get started.",
+        "Onboarding instructions do not need to be added. The app's purpose is clear once users get started.",
         "A unified first profile picture standard should be introduced to avoid confusion (e.g. users uploading group photos).",
         "A progress bar or confirmation notification should appear when saving profile changes so users aren't left guessing.",
       ],
       takeaways: [
-        "The app has a lot of potential — it is a great concept that users like and trust.",
+        "The app has a lot of potential. It is a great concept that users like and trust.",
         "Many additional ideas surfaced during testing that are worth pursuing beyond this study.",
       ],
     },
-    reflection: "This project reinforced how much potential Loop has as a concept — users genuinely liked the idea of being set up by people they trust. The research made clear that the app's core value is strong, but the interface needs work to match it. Navigating between finding a match and growing a network was not always intuitive, and small friction points like missing confirmation messages and unclear pending approvals added up quickly. The feedback gave me many ideas I'd like to continue exploring beyond this study, particularly around homepage structure and profile management.",
+    reflection: "This project reinforced how much potential Loop has as a concept. Users genuinely liked the idea of being set up by people they trust. The research made clear that the app's core value is strong, but the interface needs work to match it. Navigating between finding a match and growing a network was not always intuitive, and small friction points like missing confirmation messages and unclear pending approvals added up quickly. The feedback gave me many ideas I'd like to continue exploring beyond this study, particularly around homepage structure and profile management.",
   },
 
   "hr-nexus": {
-    title: "HR Nexus — HR Advisory Platform",
+    title: "HR Nexus HR Advisory Platform",
     subtitle: "UX Research | In Progress",
     duration: "In progress",
     team: "Myself",
     role: "UX Researcher",
     intro: "This is a school project currently in progress. More details and research findings will be added as the project develops.",
-    about: "[ Placeholder — describe what HR Nexus is and what problem it solves. ]",
+    about: "[ Placeholder —describe what HR Nexus is and what problem it solves. ]",
     goals: [
-      "[ Placeholder — goal 1 ]",
-      "[ Placeholder — goal 2 ]",
+      "[ Placeholder —goal 1 ]",
+      "[ Placeholder —goal 2 ]",
     ],
     discover: {
-      research: "[ Placeholder — describe research approach. ]",
-      interviews: "[ Placeholder — describe target audience and interviews. ]",
+      research: "[ Placeholder —describe research approach. ]",
+      interviews: "[ Placeholder —describe target audience and interviews. ]",
       discoveryFindings: [
-        "[ Placeholder — key finding 1 ]",
-        "[ Placeholder — key finding 2 ]",
+        "[ Placeholder —key finding 1 ]",
+        "[ Placeholder —key finding 2 ]",
       ],
     },
     define: {
-      affinityMap: "[ Placeholder — describe affinity mapping. ]",
-      persona: "[ Placeholder — describe the primary persona. ]",
+      affinityMap: "[ Placeholder —describe affinity mapping. ]",
+      persona: "[ Placeholder —describe the primary persona. ]",
     },
     ideate: {
-      journeyMap: "[ Placeholder — describe the journey map. ]",
+      journeyMap: "[ Placeholder —describe the journey map. ]",
       jtbd: "",
-      mvp: "[ Placeholder — describe MVP scope. ]",
-      taskFlow: "[ Placeholder — describe the task flow. ]",
+      mvp: "[ Placeholder —describe MVP scope. ]",
+      taskFlow: "[ Placeholder —describe the task flow. ]",
     },
     design: {
-      sketches: "[ Placeholder — describe sketches and sitemap. ]",
-      wireframes: "[ Placeholder — describe wireframes. ]",
+      sketches: "[ Placeholder —describe sketches and sitemap. ]",
+      wireframes: "[ Placeholder —describe wireframes. ]",
     },
     deliver: {
-      testing: "[ Placeholder — describe testing and findings. ]",
+      testing: "[ Placeholder —describe testing and findings. ]",
     },
-    reflection: "[ Placeholder — describe outcome and next steps. ]",
+    reflection: "[ Placeholder —describe outcome and next steps. ]",
   },
 };
 
@@ -292,7 +292,7 @@ function NprPage() {
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <Link href="/" className="text-[#5A77D8] hover:text-[#003F88] transition-colors font-medium">← Back</Link>
 
-        <h1 className="text-4xl font-bold text-[#003F88] mt-6 mb-8">NPR News — UX Case Study</h1>
+        <h1 className="text-4xl font-bold text-[#003F88] mt-6 mb-8">NPR NewsUX Case Study</h1>
 
         {/* Hero: mockup + prototype button */}
         <div className="flex max-md:flex-col flex-row items-center gap-10 mb-12 bg-[#C3DBFD]/20 border border-[#C3DBFD] rounded-2xl p-8">
