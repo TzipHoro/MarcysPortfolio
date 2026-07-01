@@ -139,13 +139,19 @@ export default function DesignProcess() {
               alt="Task flow"
               width={800}
               height={500}
-              className="rounded-lg shadow-sm w-full h-auto border border-zinc-100"
+              className="rounded-lg shadow-sm w-full h-auto border border-zinc-100 mb-6"
             />
+            <p className="text-zinc-800 leading-relaxed">
+              All of this research led to one clear design challenge: how do you make it easy for someone like Alice to find and join a community she actually cares about? That question drove every decision in the design stage.
+            </p>
           </div>
         )}
 
         {active === "Design" && (
           <div>
+            <p className="text-zinc-800 leading-relaxed mb-6">
+              With Alice's scenario in mind, I began translating the task flow into screens. The goal was simple: get her from opening the app to joining a politics community in as few steps as possible.
+            </p>
             <h4 className="text-base font-semibold text-[#003F88] mb-3">Sketches / Sitemap</h4>
             <p className="text-zinc-800 leading-relaxed mb-4">
               Now that I created my task flow, I began to work on the sketches for the app. Since this app does not have a profile page, I had to create one myself. I researched what other applications that had profiles and customization pages to get a sense of where and how it was placed. I found that they placed their "profile" either on the top right of their app or as another tab. I found on research it would be easier to add a profile tab at the bottom.
