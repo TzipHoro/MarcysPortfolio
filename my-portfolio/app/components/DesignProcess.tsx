@@ -59,7 +59,7 @@ export default function DesignProcess() {
 
             <h4 className="text-base font-semibold text-[#003F88] mb-2">Interviews</h4>
             <p className="text-zinc-800 leading-relaxed mb-4">
-              The target audience I decided to focus on for my part in the project was the Baby Boomers — those who are very interested in checking the news (checking it more than a few times a day).
+              The target audience I decided to focus on for my part in the project was the Baby Boomers, those who are very interested in checking the news (checking it more than a few times a day).
             </p>
 
             <h4 className="text-base font-semibold text-[#003F88] mb-3">Discovery from Interviews</h4>
@@ -129,7 +129,7 @@ export default function DesignProcess() {
 
             <h4 className="text-base font-semibold text-[#003F88] mb-3">Task Flow</h4>
             <p className="text-zinc-800 leading-relaxed mb-2">
-              After much research I constructed my task flow for Alice Doe, the persona I created, based on her frustrations. The feature I designed allows Alice to join a community based on a topic she enjoys — bringing more relevance and connection to her news experience.
+              After much research I constructed my task flow for Alice Doe, the persona I created, based on her frustrations. The feature I designed allows Alice to join a community based on a topic she enjoys, bringing more relevance and connection to her news experience.
             </p>
             <p className="text-zinc-800 leading-relaxed mb-4">
               <strong>User scenario:</strong> Alice loves to read news multiple times throughout the day. She wants to be able to read news that was shared with people who share the same opinions and values. Therefore she is searching for a community that shares the same love of politics like she does.
