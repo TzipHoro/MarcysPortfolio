@@ -167,8 +167,8 @@ export default function DesignProcess() {
             </p>
             <ImageCarousel
               slides={[
-                { src: "/wireframe1_npr.webp", alt: "Wireframe — first version" },
                 { src: "/wireframe2_npr.webp", alt: "Wireframe — second version" },
+                { src: "/wireframe1_npr.webp", alt: "Wireframe — first version" },
               ]}
             />
           </div>
