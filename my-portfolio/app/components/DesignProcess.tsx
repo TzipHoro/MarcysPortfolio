@@ -111,9 +111,12 @@ export default function DesignProcess() {
             <p className="text-zinc-800 leading-relaxed mb-3">
               After putting together both my persona and user journey map the next stage was to create the JTBD statement which is as follows:
             </p>
-            <blockquote className="border-l-4 border-[#FF5DB6] pl-4 py-2 mb-8 text-zinc-800 italic">
+            <blockquote className="border-l-4 border-[#FF5DB6] pl-4 py-2 mb-6 text-zinc-800 italic">
               <strong>My Job To Be Done:</strong> When I want to share news that I read with my friends I want to be able to only share certain parts of the article and not the whole so I can make it easy for them to read and understand the main points.
             </blockquote>
+            <p className="text-zinc-800 leading-relaxed mb-8">
+              My initial idea for a solution was different — I started by focusing on article sharing. But as the research deepened, it became clear that what users really needed was a way to connect with people who shared their interests. That insight is what led me to pivot toward the community-joining feature, which became the heart of my design.
+            </p>
 
             <h4 className="text-base font-semibold text-[#003F88] mb-3">MVP (Minimal Viable Product)</h4>
             <p className="text-zinc-800 leading-relaxed mb-4">
