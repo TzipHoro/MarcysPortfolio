@@ -129,7 +129,7 @@ export default function DesignProcess() {
 
             <h4 className="text-base font-semibold text-[#003F88] mb-3">Task Flow</h4>
             <p className="text-zinc-800 leading-relaxed mb-4">
-              After much research I constructed my task flow for the persona I created that went along with the frustrations of hers.
+              After much research I constructed my task flow for Alice Doe, the persona I created, based on her frustrations. The feature I designed allows Alice to join a community based on a topic she enjoys — bringing more relevance and connection to her news experience.
             </p>
             <Image
               src="/task_flow_npr.webp"
