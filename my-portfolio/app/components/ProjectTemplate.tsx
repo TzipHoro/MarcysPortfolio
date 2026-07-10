@@ -344,7 +344,6 @@ function DesignProcessPlaceholder({ data }: { data: ProjectData }) {
               <>
                 <SubHeading>Affinity Map</SubHeading>
                 <Body className="mb-6">{data.define.affinityMap || PLACEHOLDER}</Body>
-                <PlaceholderImage label="Affinity map" />
 
                 <SubHeading>Persona</SubHeading>
                 {data.define.persona && <Body className="mb-4">{data.define.persona}</Body>}
