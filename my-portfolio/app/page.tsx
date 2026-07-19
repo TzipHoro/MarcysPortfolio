@@ -24,7 +24,7 @@ export default function Home() {
               UX/UI Designer
             </h1>
             <p className="text-xl text-zinc-700 mb-8 leading-relaxed">
-              Aspiring product designer passionate about user research, strategic thinking,
+              Product designer passionate about user research, strategic thinking,
               and creating experiences that are both beautiful and intuitive.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-start">
