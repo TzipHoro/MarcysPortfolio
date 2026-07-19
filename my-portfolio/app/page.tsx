@@ -46,7 +46,7 @@ export default function Home() {
       </section>
 
       {/* About Section */}
-      <section id="about" className="bg-[#C3DBFD]/20 px-4 sm:px-6 lg:px-8 py-20">
+      <section id="about" className="bg-[#C3DBFD]/20 px-4 sm:px-6 lg:px-8 pt-32 pb-20">
         <div className="max-w-3xl mx-auto">
           <h2 className="text-4xl font-bold text-[#003F88] mb-8">About Me</h2>
           <p className="text-lg text-zinc-700 mb-4 leading-relaxed">
