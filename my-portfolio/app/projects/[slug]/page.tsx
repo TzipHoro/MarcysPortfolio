@@ -324,10 +324,9 @@ function NprPage() {
         <section className="mb-10">
           <h2 className="text-2xl font-semibold text-[#003F88] mb-4">Project Details</h2>
           <p className="text-zinc-700 mb-1"><strong>UX Case Study | 8 Weeks</strong></p>
-          <p className="text-zinc-700 mb-1"><strong>My Team:</strong> Marcella, Emily, Kate, Shelly</p>
           <p className="text-zinc-700 mb-4"><strong>My Role:</strong> UX Researcher and Designer</p>
           <p className="text-zinc-700 leading-relaxed">
-            This was a student project I completed for school and is not a current feature for NPR News, but maybe one day it can be. The objective of this project was to find out <em>How might we provide users with news relevant to their wants and gain their trust?</em> My team wanted to uncover what users were lacking and what they wanted more out of their news applications. Once I discovered through research and insights, I designed a new feature that allowed the users to join a community that followed their common interests.
+            This was a student project I completed for school and is not a current feature for NPR News, but maybe one day it can be. The objective of this project was to find out <em>How might we provide users with news relevant to their wants and gain their trust?</em> I wanted to uncover what users were lacking and what they wanted more out of their news applications. Once I discovered through research and insights, I designed a new feature that allowed the users to join a community that followed their common interests.
           </p>
         </section>
 
