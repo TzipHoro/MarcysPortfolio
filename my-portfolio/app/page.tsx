@@ -8,7 +8,7 @@ export default function Home() {
       <Nav />
 
       {/* Hero Section */}
-      <section className="flex-1 flex items-center justify-center px-4 sm:px-6 lg:px-8 py-40">
+      <section className="flex-1 flex items-center justify-center px-4 sm:px-6 lg:px-8 py-[120px]">
         <div className="max-w-3xl mx-auto flex max-md:flex-col flex-row gap-16 items-stretch">
           <div className="relative max-md:h-[300px] w-[300px] max-md:w-full shrink-0">
             <Image
@@ -46,7 +46,7 @@ export default function Home() {
       </section>
 
       {/* About Section */}
-      <section id="about" className="bg-[#C3DBFD]/20 px-4 sm:px-6 lg:px-8 pt-56 pb-40">
+      <section id="about" className="bg-[#C3DBFD]/20 px-4 sm:px-6 lg:px-8 pt-[120px] pb-[120px]">
         <div className="max-w-3xl mx-auto">
           <h2 className="text-4xl font-bold text-[#003F88] mb-8">About Me</h2>
           <p className="text-lg text-zinc-700 mb-4 leading-relaxed">
@@ -75,7 +75,7 @@ export default function Home() {
       </section>
 
       {/* Projects Section */}
-      <section id="projects" className="px-4 sm:px-6 lg:px-8 py-40">
+      <section id="projects" className="px-4 sm:px-6 lg:px-8 py-[120px]">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl font-bold text-[#003F88] mb-12">Featured Projects</h2>
           <div className="grid gap-10">
@@ -126,7 +126,7 @@ export default function Home() {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="bg-[#C3DBFD]/20 px-4 sm:px-6 lg:px-8 py-40">
+      <section id="contact" className="bg-[#C3DBFD]/20 px-4 sm:px-6 lg:px-8 py-[120px]">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-4xl font-bold text-[#003F88] mb-8">Let's Connect</h2>
           <p className="text-lg text-zinc-700 mb-8">
