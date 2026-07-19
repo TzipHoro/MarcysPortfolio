@@ -86,6 +86,7 @@ export default function Home() {
                 description:
                   "Student UX research and design project (team: Marcella, Emily, Kate, Shelly). I led research and design to prototype an MVP that connects users through interest-based communities, improving relevance and trust in news consumption.",
                 tags: ["UX Research", "UX Design", "Prototyping", "JTBD", "School Project"],
+                image: "/Phone+Mockup.webp",
               },
               {
                 slug: "nasaa",
@@ -93,6 +94,7 @@ export default function Home() {
                 description:
                   "A travel app aimed at simplifying trip planning by addressing common traveler pain points (itineraries, collaboration, recommendations). Project currently in progress — focused on research and ideation.",
                 tags: ["UX Research", "Product Design", "Travel", "In Progress", "School Project"],
+                image: "/nasaa-mockup.png.jpg",
               },
               {
                 slug: "loop-me-in",
@@ -100,6 +102,7 @@ export default function Home() {
                 description:
                   "Solo UX research project evaluating ease of match-finding and usability on a friend-based dating app. Research focused on interviews, task flows, and usability testing to surface friction and improve trust and safety in matchmaking.",
                 tags: ["UX Research", "Usability Testing", "Product Research", "Dating App", "School Project"],
+                image: "/loop-mockup.png",
               },
               {
                 slug: "hr-nexus",
@@ -107,17 +110,38 @@ export default function Home() {
                 description:
                   "A technology platform that provides expert HR advice to employers dealing with workforce issues. The project is ongoing and focuses on research and product design to deliver practical employer-facing solutions.",
                 tags: ["Product Design", "HR Tech", "UX Research", "In Progress", "School Project"],
+                image: null,
               },
-            ].map((project) => (
-              <Link key={project.slug} href={`/projects/${project.slug}`} className="block">
-                <div className="border border-[#C3DBFD] rounded-lg p-8 hover:shadow-lg hover:border-[#5A77D8] transition-all">
-                  <h3 className="text-2xl font-semibold text-[#003F88] mb-4">{project.title}</h3>
-                  <p className="text-zinc-700 leading-relaxed mb-6">{project.description}</p>
-                  <div className="flex gap-2 flex-wrap">
-                    {project.tags.map((tag) => (
-                      <span key={tag} className="inline-block px-3 py-1 bg-[#FFC0DB]/40 text-[#003F88] rounded-full text-sm font-medium">{tag}</span>
-                    ))}
+            ].map((project, i) => (
+              <Link key={project.slug} href={`/projects/${project.slug}`} className="block group">
+                <div
+                  className={`flex ${i % 2 === 1 ? "max-lg:flex-col-reverse" : "max-lg:flex-col"} ${i % 2 === 1 ? "lg:flex-row-reverse" : "lg:flex-row"} items-center gap-10 bg-[#C3DBFD]/20 border border-[#C3DBFD] rounded-3xl p-10 group-hover:border-[#5A77D8] group-hover:shadow-lg transition-all`}
+                >
+                  <div className="flex-1 flex flex-col gap-4">
+                    <div className="flex gap-2 flex-wrap">
+                      {project.tags.map((tag) => (
+                        <span key={tag} className="inline-block px-3 py-1 bg-white text-[#5A77D8] rounded-full text-sm font-medium">{tag}</span>
+                      ))}
+                    </div>
+                    <h3 className="text-3xl font-bold text-[#003F88]">{project.title}</h3>
+                    <p className="text-zinc-700 leading-relaxed">{project.description}</p>
+                    <span className="inline-flex items-center gap-1 text-[#5A77D8] font-medium group-hover:text-[#003F88] transition-colors">
+                      View case study
+                      <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 11L11 3M11 3H4M11 3V10" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                      </svg>
+                    </span>
                   </div>
+                  {project.image && (
+                    <div className="relative w-full lg:w-[280px] h-[220px] shrink-0">
+                      <Image
+                        src={project.image}
+                        alt={`${project.title} preview`}
+                        fill
+                        className="rounded-2xl object-cover shadow-md"
+                      />
+                    </div>
+                  )}
                 </div>
               </Link>
             ))}
