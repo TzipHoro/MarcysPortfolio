@@ -120,7 +120,7 @@ export default function Home() {
                   <div className="flex-1 flex flex-col gap-4">
                     <div className="flex gap-2 flex-wrap">
                       <span className="inline-block px-3 py-1 bg-white text-[#5A77D8] rounded-full text-sm font-medium">{project.category}</span>
-                      <span className="inline-block px-3 py-1 bg-white text-[#5A77D8] rounded-full text-sm font-medium">Student Project</span>
+                      <span className="inline-block px-3 py-1 bg-[#FFC0DB]/40 text-[#FF5DB6] rounded-full text-sm font-medium">Student Project</span>
                     </div>
                     <h3 className="text-3xl font-bold text-[#003F88]">{project.title}</h3>
                     <p className="text-zinc-700 leading-relaxed">{project.description}</p>
