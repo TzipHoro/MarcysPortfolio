@@ -9,7 +9,7 @@ export default function Home() {
 
       {/* Hero Section */}
       <section className="flex-1 flex items-center justify-center px-4 sm:px-6 lg:px-8 py-[120px]">
-        <div className="max-w-3xl mx-auto flex max-md:flex-col flex-row gap-16 items-stretch">
+        <div className="max-w-3xl mx-auto flex max-md:flex-col flex-row gap-24 items-stretch">
           <div className="relative max-md:h-[300px] w-[300px] max-md:w-full shrink-0">
             <Image
               src="/Marcella+Web+Photo.webp"
@@ -19,7 +19,7 @@ export default function Home() {
               className="rounded-lg shadow-lg object-cover"
             />
           </div>
-          <div className="text-center flex-1">
+          <div className="text-left flex-1 flex flex-col justify-center">
             <h1 className="text-5xl font-bold tracking-tight text-[#003F88] mb-6">
               UX/UI Designer
             </h1>
@@ -27,7 +27,7 @@ export default function Home() {
               Aspiring product designer passionate about user research, strategic thinking,
               and creating experiences that are both beautiful and intuitive.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-start">
               <a
                 href="#projects"
                 className="px-8 py-3 rounded-full bg-[#5A77D8] text-white font-medium hover:bg-[#003F88] transition-colors"
