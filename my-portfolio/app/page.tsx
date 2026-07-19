@@ -89,20 +89,20 @@ export default function Home() {
                 image: "/Phone+Mockup.webp",
               },
               {
-                slug: "nasaa",
-                title: "Nasaa — Travel Planning App (in progress)",
-                description:
-                  "Simplifying trip planning by solving common traveler pain points like itineraries, collaboration, and recommendations.",
-                category: "UX Research",
-                image: "/nasaa-mockup.png.jpg",
-              },
-              {
                 slug: "loop-me-in",
                 title: "Loop Me In — UX Case Study (4 weeks)",
                 description:
                   "Evaluated match-finding and usability on a friend-based dating app to improve trust and safety in matchmaking.",
                 category: "UX Research",
                 image: "/loop-mockup.png",
+              },
+              {
+                slug: "nasaa",
+                title: "Nasaa — Travel Planning App (in progress)",
+                description:
+                  "Simplifying trip planning by solving common traveler pain points like itineraries, collaboration, and recommendations.",
+                category: "UX Research",
+                image: "/nasaa-mockup.png.jpg",
               },
               {
                 slug: "hr-nexus",
