@@ -13,7 +13,7 @@ export default function Nav() {
 
   return (
     <nav className="sticky top-0 z-40 border-b border-[#C3DBFD] bg-white/90 backdrop-blur-sm">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+      <div className="w-full px-4 sm:px-6 py-4 flex justify-between items-center">
         <a href="/" className="text-2xl font-bold text-[#003F88] hover:text-[#5A77D8] transition-colors">Marcella Lehman</a>
 
         {/* Desktop links */}
