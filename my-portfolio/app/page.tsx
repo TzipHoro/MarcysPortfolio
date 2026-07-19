@@ -75,7 +75,7 @@ export default function Home() {
       </section>
 
       {/* Projects Section */}
-      <section id="projects" className="px-4 sm:px-6 lg:px-8 py-[120px]">
+      <section id="projects" className="px-4 sm:px-6 lg:px-8 py-[180px]">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl font-bold text-[#003F88] mb-12">Featured Projects</h2>
           <div className="grid gap-10">
