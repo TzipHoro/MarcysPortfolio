@@ -118,7 +118,10 @@ export default function Home() {
                   className={`flex ${i % 2 === 1 ? "max-lg:flex-col-reverse" : "max-lg:flex-col"} ${i % 2 === 1 ? "lg:flex-row-reverse" : "lg:flex-row"} items-center gap-10 bg-[#C3DBFD]/20 border border-[#C3DBFD] rounded-3xl p-10 group-hover:border-[#5A77D8] group-hover:shadow-lg transition-all`}
                 >
                   <div className="flex-1 flex flex-col gap-4">
-                    <span className="inline-block w-fit px-3 py-1 bg-white text-[#5A77D8] rounded-full text-sm font-medium">{project.category}</span>
+                    <div className="flex gap-2 flex-wrap">
+                      <span className="inline-block px-3 py-1 bg-white text-[#5A77D8] rounded-full text-sm font-medium">{project.category}</span>
+                      <span className="inline-block px-3 py-1 bg-white text-[#5A77D8] rounded-full text-sm font-medium">Student Project</span>
+                    </div>
                     <h3 className="text-3xl font-bold text-[#003F88]">{project.title}</h3>
                     <p className="text-zinc-700 leading-relaxed">{project.description}</p>
                     <span className="inline-flex items-center gap-1 text-[#5A77D8] font-medium group-hover:text-[#003F88] transition-colors">
