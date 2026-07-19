@@ -84,7 +84,7 @@ export default function Home() {
                 slug: "npr-news",
                 title: "NPR News — UX Case Study (8 weeks)",
                 description:
-                  "Student UX research and design project (team: Marcella, Emily, Kate, Shelly). I led research and design to prototype an MVP that connects users through interest-based communities, improving relevance and trust in news consumption.",
+                  "Led research and design for an MVP connecting users through interest-based communities to improve trust in news consumption.",
                 category: "Product Design",
                 image: "/Phone+Mockup.webp",
               },
@@ -92,7 +92,7 @@ export default function Home() {
                 slug: "nasaa",
                 title: "Nasaa — Travel Planning App (in progress)",
                 description:
-                  "A travel app aimed at simplifying trip planning by addressing common traveler pain points (itineraries, collaboration, recommendations). Project currently in progress — focused on research and ideation.",
+                  "Simplifying trip planning by solving common traveler pain points like itineraries, collaboration, and recommendations.",
                 category: "UX Research",
                 image: "/nasaa-mockup.png.jpg",
               },
@@ -100,7 +100,7 @@ export default function Home() {
                 slug: "loop-me-in",
                 title: "Loop Me In — UX Case Study (4 weeks)",
                 description:
-                  "Solo UX research project evaluating ease of match-finding and usability on a friend-based dating app. Research focused on interviews, task flows, and usability testing to surface friction and improve trust and safety in matchmaking.",
+                  "Evaluated match-finding and usability on a friend-based dating app to improve trust and safety in matchmaking.",
                 category: "UX Research",
                 image: "/loop-mockup.png",
               },
@@ -108,7 +108,7 @@ export default function Home() {
                 slug: "hr-nexus",
                 title: "HR Nexus — HR Advisory Platform (in progress)",
                 description:
-                  "A technology platform that provides expert HR advice to employers dealing with workforce issues. The project is ongoing and focuses on research and product design to deliver practical employer-facing solutions.",
+                  "Designing a platform that gives employers expert HR advice to navigate workforce challenges.",
                 category: "UX Research",
                 image: null,
               },
